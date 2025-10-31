@@ -14,8 +14,8 @@ class Animal:
         self.hidden = hidden
         Animal.alive.append(self)
 
-    def apply_damage(self, damage: int) -> None:
-        self.health -= damage
+    def apply_damage(self, damage_from_bite: int) -> None:
+        self.health -= damage_from_bite
         if self.health <= 0:
             if self in Animal.alive:
                 Animal.alive.remove(self)
